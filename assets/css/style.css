@@ -33,3 +33,93 @@ label {
     font-size: 20px;
     font-weight: bold;
 }
+
+.custom-bar{
+    background-color: #f4f4f4;
+    padding: 15px;
+        font-weight: bold;
+}
+
+.nav-pills .nav-link.active,.nav-pills .show>.nav-link {
+    color: #fff;
+    background-color: #17a2b8;
+}
+
+a{
+    color: #17a2b8;
+}
+
+.lamp {
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    left: auto;
+    font-weight: 100;
+    font-size: 30px;
+    color: #fff;
+    background-color: #191414;
+    padding: 0px 0px;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+    border-radius: 50px;
+    transition: 1299ms;
+    transform: translateY(0);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+}
+
+.lamp:hover {
+    transition: 1299ms;
+    padding: 10px 11px;
+    transform: translateY(-0px);
+    background-color: #191414;
+    border: none;
+}
+
+.lamp:focus{
+    border: none;
+    outline: none;
+}
+
+/* DARK-MODE */
+
+body{
+    transition: 500ms;
+}
+
+.dark-mode {
+    transition: 500ms;
+    background-color: #191414;
+    color: white;
+}
+
+.dark-mode .custom-bar {
+    background-color: #1a1a1a;
+}
+
+.dark-mode .lamp{
+    background-color: #fff;
+}
+.dark-mode .lamp:hover {
+    background-color: #fff;
+}
+.dark-mode button{
+    background-color: #f37021;
+    border: none;
+}
+
+.dark-mode button:hover {
+    background-color: #f37021;
+}
+
+.dark-mode .nav-pills .nav-link.active,
+.nav-pills .show>.nav-link {
+    color: #fff;
+    background-color: #f37021;
+}
+
+.dark-mode a {
+    color: #f37021;
+}

@@ -8,10 +8,23 @@
     <link rel="shortcut icon" href="assets/img/logo.png" type="image/x-icon">
 </head>
 
-<body class="bg-efi">
+<body class="bg-efi" onload="checkDarkmode()">
     <div class="container">
         <div class="row justify-content-md-center">
             <img class="logo" src="assets/img/logo.png" alt="logo">
+        </div>
+        <div>
+            <button class="lamp" onclick="darkmode()">💡</button>
+        </div>
+        <div class="custom-bar mb-4">
+            <ul class="nav nav-pills nav-justified">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Codificador de Credenciais Base64</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="certificado.html">Conversor de Certificado</a>
+                </li>
+            </ul>
         </div>
         <div class="row justify-content-md-center">
             <h2>Codificação Base64 de Client Credentials</h2>
@@ -20,27 +33,31 @@
 
             <div id="credentials-div">
                 <label for="client-id">Client ID:</label>
-                <input class="form-control" type="text" id="client-id" name="client-id" required><br>
+                <input class="form-control darkmode-ignore" type="text" id="client-id" name="client-id" required><br>
 
                 <label for="client-secret">Client Secret:</label>
-                <input class="form-control" type="text" id="client-secret" name="client-secret" required><br>
+                <input class="form-control darkmode-ignore" type="text" id="client-secret" name="client-secret"
+                    required><br>
 
                 <button class="btn btn-info btn-wide" type="button" onclick="encodeClientCredentials()">Codificar e
                     Exibir</button>
             </div>
         </div>
 
-        <div class="row justify-content-md-center">
+        <div class="row justify-content-md-center mb-4">
             <div id="base64-credentials">
-                <textarea class="form-control encodedCredentials mb-3" id="encodedCredentials" cols="55" rows="10"
-                    disabled></textarea>
-                <button class="btn btn-info btn-wide" onclick='copyEncoded()' id='gnbtncopy' class='button'>Clique
+                <textarea class="form-control encodedCredentials mb-3 darkmode-ignore" id="encodedCredentials" cols="55"
+                    rows="10" disabled></textarea>
+                <button class="btn btn-info btn-wide" onclick='copyEncoded()' id='gnbtncopy' class='button'>📋 Clique
                     aqui
                     para copiar!</button>
             </div>
         </div>
 
-
+        <div class="row justify-content-md-center mt-4">
+            <p class="mt-4">Desenvolvido com <span class="darkmode-ignore">🧡</span> pela Consultoria Técnica da Efí
+                Bank</p>
+        </div>
     </div>
 
 
@@ -48,9 +65,8 @@
         integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css">
     <script src="assets/js/script.js"></script>
-    <footer>
-        <p>Desenvolvido com 🧡 pela Consultoria Técnica da Efí Bank</p>
-    </footer>
+    <script src="assets/js/darkmode.js"></script>
+
 </body>
 
 </html>
